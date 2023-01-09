@@ -6,20 +6,23 @@
 
 int main()
 {
-    int values[] = { 0, 1, 2, 3, 4, 5, };
-    QuickFind<int> quickFind = QuickFind<int>(values);
+    while (true)
+    {
+        std::string values[] = { "0", "1", "2", "3", "4", "5", };
+        QuickFind<std::string> quickFind = QuickFind<std::string>(values, 6);
 
-    bool result1 = quickFind.Union(1, 2); //true
-    bool result2 = quickFind.AreConnected(1, 5); //false
-    bool result3 = quickFind.Union(2, 5); //true
-    bool result4 = quickFind.AreConnected(1, 5); //true
-    int result5 = quickFind.Find(3); // 3
-    int result6 = quickFind.Find(2); // 5
-    bool result7 = quickFind.Union(0, 4); //true
-    bool result8 = quickFind.AreConnected(4, 5); //false
-    bool result9 = quickFind.Union(1, 2); //false
-    bool result10 = quickFind.Union(1, 6); //false
-    int result11 = quickFind.Find(20); // -1
+        bool result1 = quickFind.Union("1", "2"); //true
+        bool result2 = quickFind.AreConnected("1", "5"); //false
+        bool result3 = quickFind.Union("2", "5"); //true
+        bool result4 = quickFind.AreConnected("1", "5"); //true
+        int result5 = quickFind.Find("3"); // 3
+        int result6 = quickFind.Find("2"); // 5
+        bool result7 = quickFind.Union("0", "4"); //true
+        bool result8 = quickFind.AreConnected("4", "5"); //false
+        bool result9 = quickFind.Union("1", "2"); //false
+        bool result10 = quickFind.Union("1", "6"); //false
+        int result11 = quickFind.Find("20"); // -1
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
