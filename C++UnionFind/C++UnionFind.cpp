@@ -5,9 +5,21 @@
 #include "UnionFind.cpp"
 #include <random>
 #include <chrono>
+#include <functional>
+
+bool LikesFood(int numberOfPeople)
+{
+    if (numberOfPeople < 0)
+    {
+        throw std::bad_exception();
+    }
+    return true;
+}
 
 int main()
 {
+    std::function<bool(int parameter)> function = &LikesFood;
+    bool result = function(-100);
     while (true)
     {
         //std::string values[] = { "0", "1", "2", "3", "4", "5", };
